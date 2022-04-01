@@ -18,7 +18,7 @@ public class GeneratedTests extends TestBase {
     void titleENTestBeresnev() {
         step("Открыть 'https://beresnev.games/en'", () -> {
             open("https://beresnev.games/en");
-            sleep(20);
+            sleep(200);
         });
 
         step("Провкручиваем страницу вниз через специальную кнопку", () -> {
@@ -42,7 +42,7 @@ public class GeneratedTests extends TestBase {
     void titleCZTestBeresnev() {
         step("Открыть 'https://beresnev.games/cz'", () -> {
             open("https://beresnev.games/cz");
-            sleep(20);
+            sleep(200);
         });
 
         step("Провкручиваем страницу вниз через специальную кнопку", () -> {
@@ -65,7 +65,7 @@ public class GeneratedTests extends TestBase {
     void titleRUTestBeresnev() {
         step("Открыть 'https://beresnev.games/ru'", () -> {
             open("https://beresnev.games/ru");
-            sleep(20);
+            sleep(200);
         });
 
         step("Провкручиваем страницу вниз через специальную кнопку", () -> {
