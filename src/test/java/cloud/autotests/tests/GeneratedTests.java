@@ -32,7 +32,11 @@ public class GeneratedTests extends TestBase {
 
 
         step("Проверяем корректность написания заголовка We’re hiring", () -> {
-            $("[class='text--h2 text--center']", 1).scrollTo().shouldHave(text("We’re hiring"));
+            $("[class='text--h2 text--center']", 1).scrollIntoView(false).shouldHave(text("We’re hiring"));
+        });
+
+        step("Провкручиваем страницу вверх через специальную кнопку", () -> {
+            $("[class=BtnScroll_box__3XQTk]", 1).click();
         });
     }
 
@@ -58,6 +62,10 @@ public class GeneratedTests extends TestBase {
         step("Проверяем корректность написания заголовка Volná pracovní místa", () -> {
             $("[class='text--h2 text--center']", 1).scrollIntoView(false).shouldHave(text("Volná pracovní místa"));
         });
+
+        step("Провкручиваем страницу вверх через специальную кнопку", () -> {
+            $("[class=BtnScroll_box__3XQTk]", 1).click();
+        });
     }
 
     @Test
@@ -79,7 +87,11 @@ public class GeneratedTests extends TestBase {
 
 
         step("Проверяем корректность написания заголовка Открытые вакансии", () -> {
-            $("[class='text--h2 text--center']", 1).scrollTo().shouldHave(text("Открытые вакансии"));
+            $("[class='text--h2 text--center']", 1).scrollIntoView(false).shouldHave(text("Открытые вакансии"));
+        });
+
+        step("Провкручиваем страницу вверх через специальную кнопку", () -> {
+            $("[class=BtnScroll_box__3XQTk]", 1).click();
         });
     }
 
