@@ -1,6 +1,8 @@
 package cloud.autotests.tests;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Description;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -14,6 +16,7 @@ public class GeneratedTests extends TestBase {
     @Description("Checking change Titles EN version")
     @DisplayName("Beresnev")
     void titleENTestBeresnev() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Открыть 'https://beresnev.games/en'", () -> {
             open("https://beresnev.games/en");
             sleep(200);
