@@ -6,6 +6,9 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.remote.service.DriverService;
+
+import java.sql.DriverAction;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
@@ -17,7 +20,6 @@ public class GeneratedTests extends TestBase {
     @Description("Checking change Titles EN version")
     @DisplayName("Beresnev")
     void titleENTestBeresnev() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Открыть 'https://beresnev.games/en'", () -> {
             open("/en");
             sleep(200);
@@ -180,9 +182,6 @@ public class GeneratedTests extends TestBase {
         step("Проверяем Проверяем правильность написания заголовка О нас", () -> {
             $("[class=text--h1]").shouldHave(text("About us"));
         });
-
-
     }
-
 
 }
