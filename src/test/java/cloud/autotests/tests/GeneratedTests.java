@@ -18,7 +18,7 @@ public class GeneratedTests extends TestBase {
     void titleENTestBeresnev() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         step("Открыть 'https://beresnev.games/en'", () -> {
-            open("https://beresnev.games/en");
+            open("/en");
             sleep(200);
         });
 
@@ -42,7 +42,7 @@ public class GeneratedTests extends TestBase {
     @DisplayName("Beresnev")
     void titleCZTestBeresnev() {
         step("Открыть 'https://beresnev.games/cz'", () -> {
-            open("https://beresnev.games/cz");
+            open("/cz");
             sleep(200);
         });
 
@@ -65,7 +65,7 @@ public class GeneratedTests extends TestBase {
     @DisplayName("Beresnev")
     void titleRUTestBeresnev() {
         step("Открыть 'https://beresnev.games/ru'", () -> {
-            open("https://beresnev.games/ru");
+            open("/ru");
             sleep(200);
         });
 
