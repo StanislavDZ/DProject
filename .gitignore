@@ -40,3 +40,4 @@ target/
 .todo
 *.properties
 /src/test/java/cloud/autotests/docs/
+/images/
