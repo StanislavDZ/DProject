@@ -27,7 +27,7 @@ public class GeneratedTests extends TestBase {
             $("[class=BtnScroll_box__3XQTk]", 0).click();
         });
 
-        step("Проверяем корректность написания заголовка Our games", () -> {
+            step("Проверяем корректность написания заголовка Our games", () -> {
             $("[class='text--h2 text--center']", 0).shouldHave(text("Our games"));
         });
 
