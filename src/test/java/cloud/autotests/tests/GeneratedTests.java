@@ -56,7 +56,7 @@ public class GeneratedTests extends TestBase {
 
 
         step("Проверяем корректность написания заголовка Volná pracovní místa", () -> {
-            $("[class='text--h2 text--center']", 1).scrollTo().shouldHave(text("Volná pracovní místa"));
+            $("[class='text--h2 text--center']", 1).scrollIntoView(false).shouldHave(text("Volná pracovní místa"));
         });
     }
 
