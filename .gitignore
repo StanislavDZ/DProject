@@ -41,3 +41,5 @@ target/
 *.properties
 /src/test/java/cloud/autotests/docs/
 /images/
+/src/test/java/components/
+/src/test/resources/config/demowebshop/

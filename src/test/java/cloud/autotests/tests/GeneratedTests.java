@@ -1,14 +1,9 @@
 package cloud.autotests.tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Description;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.remote.service.DriverService;
 
-import java.sql.DriverAction;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
@@ -18,7 +13,7 @@ import static io.qameta.allure.Allure.step;
 public class GeneratedTests extends TestBase {
     @Test
     @Description("Checking change Titles EN version")
-    @DisplayName("Beresnev")
+    @DisplayName("Beresnev EN Base")
     void titleENTestBeresnev() {
         step("Открыть 'https://beresnev.games/en'", () -> {
             open("/en");
@@ -46,7 +41,7 @@ public class GeneratedTests extends TestBase {
 
     @Test
     @Description("Checking change Titles Cz version")
-    @DisplayName("Beresnev")
+    @DisplayName("Beresnev CZ Base")
     void titleCZTestBeresnev() {
         step("Открыть 'https://beresnev.games/cz'", () -> {
             open("/cz");
@@ -73,7 +68,7 @@ public class GeneratedTests extends TestBase {
 
     @Test
     @Description("Checking change Titles Ru version")
-    @DisplayName("Beresnev")
+    @DisplayName("Beresnev RU Base")
     void titleRUTestBeresnev() {
         step("Открыть 'https://beresnev.games/ru'", () -> {
             open("/ru");
@@ -100,7 +95,7 @@ public class GeneratedTests extends TestBase {
 
     @Test
     @Description("Checking change Titles Ru version")
-    @DisplayName("Beresnev")
+    @DisplayName("Beresnev RU Careers")
     void titleRUTestBeresnevVoc() {
         step("Переходим на вкладку с вакансиями (RU) 'https://beresnev.games/ru'", () -> {
             open("/ru/careers");
@@ -114,7 +109,7 @@ public class GeneratedTests extends TestBase {
 
     @Test
     @Description("Checking change Titles Ru version")
-    @DisplayName("Beresnev")
+    @DisplayName("Beresnev RU About")
     void titleRUTestBeresnevAbo() {
         step("Переходим на вкладку с вакансиями (RU) 'https://beresnev.games/ru'", () -> {
             open("/ru/about");
@@ -128,7 +123,7 @@ public class GeneratedTests extends TestBase {
 
     @Test
     @Description("Checking change Titles CZ version")
-    @DisplayName("Beresnev")
+    @DisplayName("Beresnev CZ Careers")
     void titleCZTestBeresnevVoc() {
         step("Переходим на вкладку с вакансиями (CZ) 'https://beresnev.games/cz'", () -> {
             open("/cz/careers");
@@ -142,7 +137,7 @@ public class GeneratedTests extends TestBase {
 
     @Test
     @Description("Checking change Titles Cz version")
-    @DisplayName("Beresnev")
+    @DisplayName("Beresnev Cz About")
     void titleCZTestBeresnevAbo() {
         step("Переходим на вкладку с вакансиями (CZ) 'https://beresnev.games/cz'", () -> {
             open("/cz/about");
@@ -158,7 +153,7 @@ public class GeneratedTests extends TestBase {
 
     @Test
     @Description("Checking change Titles EN version")
-    @DisplayName("Beresnev")
+    @DisplayName("Beresnev EN Careers")
     void titleENTestBeresnevVoc() {
         step("Переходим на вкладку с вакансиями (EN) 'https://beresnev.games/en'", () -> {
             open("/en/careers");
@@ -172,7 +167,7 @@ public class GeneratedTests extends TestBase {
 
     @Test
     @Description("Checking change Titles Cz version")
-    @DisplayName("Beresnev")
+    @DisplayName("Beresnev EN About")
     void titleENTestBeresnevAbo() {
         step("Переходим на вкладку с вакансиями (EN) 'https://beresnev.games/en'", () -> {
             open("/en/about");
