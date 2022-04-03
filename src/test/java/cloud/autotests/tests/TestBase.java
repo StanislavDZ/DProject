@@ -14,7 +14,10 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
+        String name = System.getProperty("name");
+        String passw = System.getProperty("passw");
         String remoteDriverUrl = System.getProperty("remoteDriverUrl");
+ //      String remoteDriverUrl = System.getProperty("remoteDriverUrl");
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "https://beresnev.games";
         Configuration.browserSize = "1920x1080";
@@ -22,7 +25,7 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-        Configuration.remote = remoteDriverUrl;
+        Configuration.remote = "https://" + name + ":" + passw + "@" + remoteDriverUrl ;
     }
 
     @AfterEach
