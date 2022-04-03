@@ -19,7 +19,7 @@ public class TestBase {
         Configuration.browserSize = "1920x1080";
         String user = System.getProperty("user");
         String password = System.getProperty("password");
-        Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser")
+        Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
