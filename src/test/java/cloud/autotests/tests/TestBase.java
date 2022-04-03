@@ -14,16 +14,15 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
+        String remoteDriverUrl = System.getProperty("remoteDriverUrl");
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "https://beresnev.games";
         Configuration.browserSize = "1920x1080";
-        String user = System.getProperty("user");
-        String password = System.getProperty("password");
-        Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
+        Configuration.remote = remoteDriverUrl;
     }
 
     @AfterEach
