@@ -1,124 +1,110 @@
-# Проект по автоматизации тестирования для beresnev.games
-<a target="_blank" href="https://beresnev.games/">Игровая студия Beresnev</a>
+# Проект автоматизации тестирования для <a target="_blank" href="https://vkusvill.ru/">ВкусВилл</a> <img src="img/logo/VV.svg" width="50" height="50"  alt="IDEA"/>
 
-## :see_no_evil: Содержание:
+## :open_book: Содержание:
+- [Технологии и инструменты](#gear-в-проекте-используются-следующие-технологии-и-инструменты)
+- [Что проверяем](#heavy_check_mark-что-проверяем)
+- [Запуск тестов из Jenkins](#-запуск-тестов-из-jenkins)
+- [Запуск тестов из терминала](#computer-запуск-тестов-из-терминала)
+- [Отчеты](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
+- - [Allure](#-allure)
+- - [Telegram](#-telegram)
+- [Видео с прогоном тестов](#movie_camera-видео-с-прогоном-тестов)
+- [Allure TestOps](#-проект-интегрирован-с-allure-testOps)
 
-- [Реализованные проверки](#earth_africa-Реализованные-проверки)
-- [Allure отчет](#earth_africa-Allure-отчет)
-- [Видео примеры прохождения тестов](#earth_africa-Примеры-видео-о-прохождении-тестов)
-- [Сборка в Jenkins](#earth_africa-Jenkins-job)
-- [Запуск из терминала](#earth_africa-Запуск-тестов-из-терминала)
-- [Интеграция с Allure TestOps](#earth_africa-Интеграция-с-Allure-TestOps)
-- [Отчет в Telegram](#earth_africa-Уведомление-в-Telegram-при-помощи-бота)
-- [Технологии и инструменты](#earth_africa-технологии-и-инструменты)
+## :gear: В проекте используются следующие технологии и инструменты:
 
-
-## :eye_speech_bubble: Реализованные проверки
-
-- ✓ Проверка стартовой страницы RU:
-    * Использование кнопки быстрой прокрутки
-    * Проверка заголовка "Наши игры"
-    * Проверка заголовка "Открытые вакансии"
-    * Использование кнопки быстрой прокрутки к началу страницы
-- ✓ Проверка стартовой страницы CZ:
-    * Использование кнопки быстрой прокрутки
-    * Проверка заголовка по "Naše hry"
-    * Проверка заголовка по "Volná pracovní místa"
-    * Использование кнопки быстрой прокрутки к началу страницы
-- ✓ Проверка стартовой страницы EN:
-    * Использование кнопки быстрой прокрутки
-    * Проверка заголовка по "Our games"
-    * Проверка заголовка по "We’re hiring"
-    * Использование кнопки быстрой прокрутки к началу страницы
-- ✓ Проверка правильности написания заголовка страницы "Вакансии" на трех языках.
-    * Вакансии (RU)
-    * Volná místa CZ
-    * Careers EN
-- ✓ Проверка правильности написания заголовка страницы "О нас" на трех языках.
-    * О нас (RU)
-    * O nás (CZ)
-    * About us EN
-
-## <img src="images/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/BeresnevTST/">Сборка в Jenkins</a>
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/BeresnevTST/"><img src="images/jenkins_job.png" alt="Jenkins"/></a>
+<img src="img/logo/Idea.svg" width="50" height="50"  alt="IDEA"/>
+<img src="img/logo/Java.svg" width="50" height="50"  alt="Java"/>
+<img src="img/logo/GitHub.svg" width="50" height="50"  alt="Github"/>
+<img src="img/logo/Junit5.svg" width="50" height="50"  alt="JUnit 5"/>
+<img src="img/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/>
+<img src="img/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/>
+<img src="img/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/
+<img src="img/logo/Allure.svg" width="50" height="50"  alt="Allure"/>
+<img src="img/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/>
+<img src="img/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/>
+<img src="img/logo/Allure.svg" width="50" height="50"  alt="Allure"/>
+<img src="img/logo/Allure_TO.svg" width="50" height="50"  alt="Allure_TO"/>
+<img src="img/logo/Jira.svg" width="50" height="50"  alt="Jira"/>
 </p>
 
-### Параметры сборки в Jenkins:
+## :heavy_check_mark: Описание
+В проекте автоматизирована проверка главной страницы сайта ВкусВилл, а также отображение попапа адреса доставки при добавлении товара в корзину и поиск. Использован паттерн проектирования автотестов PageObject.
 
-- browser (браузер, по умолчанию chrome)
-- browserVersion (версия браузера, по умолчанию 91.0)
-- browserSize (размер окна браузера, по умолчанию 1920x1080)
-- remoteDriverUrl (логин, пароль и адрес удаленного сервера selenoid или grid)
-- videoStorage (адрес, по которому можно получить видео)
-- threads (количество потоков)
+## :heavy_check_mark: Что проверяем
 
-## :speak_no_evil: Запуск тестов из терминала
+> - Переход с главной в каталог;
+> - Переход с главной на страницу акций;
+> - Переход с главной на страницу магазинов;
+> - Поиск товара;
+> - Отображение поапа адреса при добавлении товара в корзину.
 
-Локальный запуск:
-```bash
+## <img width="4%" title="Jenkins" src="img/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/VarlamovaNadezhda_qa_guru_10_diplom_ui/)
+
+Для запуска тестов из Jenkins:
+1. Необходимо нажать кнопку "Собрать с параметрами".
+<img src="img/screen/Screenshot_7.jpg" alt="Jenkins"/>
+2. Выбрать параметры.
+<img src="img/screen/Screenshot_8.jpg" alt="Jenkins"/>
+3. Нажать кнопку "Собрать".
+
+### :heavy_plus_sign: Параметры сборки
+
+> - BROWSER (браузер)
+> - VERSION (версия браузера)
+> - RESOLUTION (размер окна браузера)
+> - BASEURL (адрес сайта)
+
+## :computer: Запуск тестов из терминала
+
+Для локального запуска необходимо выполнить команду:
+```
 gradle clean test
 ```
 
-Удаленный запуск:
-```bash
-clean
-test
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
--DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
--Dthreads=${THREADS}	
-```
+## :bar_chart: Отчеты о прохождении тестов доступны в Allure
 
-## <img src="images/Allure_Report.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/BeresnevTST/21/allure/">Allure report</a>
+### <img width="3%" title="Allure" src="img/logo/Allure.svg"> Allure
 
-### Основное окно
+#### Главная страница
 
-<p align="center">
-<img title="Allure Overview Dashboard" src="images/allure_main.png">
-</p>
+<img src="img/screen/AllureMain.jpg" alt="Allure"/>
 
-### Тесты
+#### Графики
 
-<p align="center">
-<img title="Allure Tests" src="images/allure_tests.png">
-</p>
+<img src="img/screen/AllureGraph.jpg" alt="Allure"/>
 
-### Графики
+#### Тесты
+
+<img src="img/screen/AllureTests.jpg" alt="Allure"/>
+
+### <img width="3%" title="Telegram" src="img/logo/Telegram.svg"> Telegram
+
+Настроена отправка оточета ботом в Telegram
+
+<img src="img/screen/Bot.jpg" alt="Telegram"/>
+
+## :movie_camera: Видео с прогоном тестов
+
+В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 
 <p align="center">
-<img title="Allure Graphics" src="images/allure_graphics.png">
+  <img title="Video" src="img/gif/test.gif">
 </p>
 
+## Проект интегрирован с Allure TestOps
+<img width="3%" title="Allure" src="img/logo/Allure_TO.svg"> 
 
-## <img src="images/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
+#### Представлены тест-кейсы
 
-<p align="center">
-<img title="Allure Overview Dashboard" src="images/allure_telegram.png">
-</p>
+<img src="img/screen/TOTest.jpg" alt="TO"/>
 
+#### Представлены дашборды аналитики
 
+<img src="img/screen/TODash.jpg" alt="TO"/>
 
-### <img src="images/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Примеры видео о прохождении тестов
+#### Представлены запуски
 
-<p align="center">
-<img title="Selenoid Video" src="images/video1.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/video2.gif" width="250" height="153"  alt="video"> <img title="Selenoid Video" src="images/video3.gif" width="250" height="153"  alt="video">
-</p>
+<img src="img/screen/TOLaunch.jpg" alt="TO"/>
 
-
-## :hear_no_evil: Технологии и инструменты
-
-<p align="center">
-<a href="https://www.jetbrains.com/idea/"><img src="images/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a>
-<a href="https://www.java.com/"><img src="images/Java.svg" width="50" height="50"  alt="Java"/></a>
-<a href="https://github.com/"><img src="images/Github.svg" width="50" height="50"  alt="Github"/></a>
-<a href="https://junit.org/junit5/"><img src="images/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a>
-<a href="https://gradle.org/"><img src="images/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
-<a href="https://selenide.org/"><img src="images/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>
-<a href="https://aerokube.com/selenoid/"><img src="images/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
-<a href="https://github.com/allure-framework/allure2"><img src="images/Allure_Report.svg" width="50" height="50"  alt="Allure"/></a>
-<a href="https://www.jenkins.io/"><img src="images/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
-</p>
